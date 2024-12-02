@@ -15,7 +15,5 @@ namespace Collab.Models
         public DateTime CreatedDate { get; set; }
 
         public int CreatorUserID { get; set; }
-
-        public required User Creator { get; set; } // Navigation property
     }
 }
