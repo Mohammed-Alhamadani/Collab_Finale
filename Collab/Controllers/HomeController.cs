@@ -15,6 +15,18 @@ namespace Collab.Controllers
 
         public IActionResult Index()
         {
+            // Check if the user is authenticated
+            if (User.Identity.IsAuthenticated)
+            {
+                // Show a welcome message with the username
+                ViewData["Message"] = "Welcome back, " + User.Identity.Name;
+            }
+            else
+            {
+                // Show a generic welcome message
+                ViewData["Message"] = "Welcome to Collab! Please log in or register to get started.";
+            }
+
             return View();
         }
 

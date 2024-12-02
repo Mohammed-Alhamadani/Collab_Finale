@@ -36,21 +36,38 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
+                        <!-- Visible to everyone -->
                         <li class="nav-item">
-                            <a class="nav-link" href="/Users">Users</a>
+                            <a class="nav-link" href="/">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/Groups">Groups</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/Events">Events</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/YouTubeCategories">YouTube Categories</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/YouTubeVideos">YouTube Videos</a>
-                        </li>
+
+                        <!-- Show only if the user is authenticated -->
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Groups">Groups</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Events">Events</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/YouTubeCategories">YouTube Categories</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/YouTubeVideos">YouTube Videos</a>
+                            </li>
+                        }
+
+                        <!-- Show only if the user is NOT authenticated -->
+                        @if (!User.Identity.IsAuthenticated)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Users/Login">Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Users/Register">Register</a>
+                            </li>
+                        }
                     </ul>
                 </div>
             </div>
