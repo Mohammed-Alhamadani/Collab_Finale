@@ -1,4 +1,10 @@
-# HEY! HI!: Ai Can Never... Platform
+# HEY! HI!
+
+Team:
+
+Jupet Jagonos
+
+Mohammed Alhamadani
 
 ## Overview
 
