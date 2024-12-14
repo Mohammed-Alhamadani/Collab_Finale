@@ -8,7 +8,7 @@ Mohammed Alhamadani
 
 ## Overview
 
-The **HEY! HI!: Ai Can Never...** platform is a cutting-edge web application designed to bring people together through shared interests, community events, and educational resources. This platform empowers users to **Meet**, **Connect**, and **Learn** in a supportive online environment.
+The **HEY! HI! ** platform is a cutting-edge web application designed to bring people together through shared interests, community events, and educational resources. This platform empowers users to **Meet**, **Connect**, and **Learn** in a supportive online environment.
 
 ### Core Concepts
 
