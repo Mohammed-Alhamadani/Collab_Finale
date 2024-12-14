@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="jumbotron text-center">
+    <h1 class="display-4">@ViewData["Message"]</h1>
+
+    @if (User.Identity.IsAuthenticated)
+    {
+        <p>
+            <a class="btn btn-primary btn-lg" href="@Url.Action("Details", "Users", new { id = User.FindFirstValue(ClaimTypes.NameIdentifier) })" role="button">View Profile</a>
+            <a class="btn btn-danger btn-lg" href="@Url.Action("Logout", "Users")" role="button">Logout</a>
+        </p>
+    }
+    else
+    {
+        <p>
+            <a class="btn btn-primary btn-lg" href="@Url.Action("Login", "Users")" role="button">Login</a>
+            <a class="btn btn-secondary btn-lg" href="@Url.Action("Register", "Users")" role="button">Register</a>
+        </p>
+    }
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center">
+            <h2>Explore Our Features</h2>
+            <p>Browse users, groups, and events. Join a community today!</p>
+        </div>
+    </div>
+</div>
